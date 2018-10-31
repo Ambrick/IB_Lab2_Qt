@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>Resources/Table.png</file>
+        <file>Resources/description.txt</file>
+    </qresource>
+</RCC>
