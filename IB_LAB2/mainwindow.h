@@ -15,7 +15,7 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    QString alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    QString alphabet="abcdefghijklmnopqrstuvwxyz";
 
 private slots:
 

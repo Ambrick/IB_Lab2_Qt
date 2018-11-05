@@ -55,8 +55,8 @@ void MainWindow::on_actionInfo_triggered()
 //Шифровка
 void MainWindow::on_Encrypt_clicked()
 {
-    QString code=ui->Code->toPlainText().toUpper(),
-            key=ui->Key->toPlainText().toUpper(),
+    QString code=ui->Code->toPlainText().toLower(),
+            key=ui->Key->toPlainText().toLower(),
             encrpt_str;
 
     //Проверяем соответствие размера и ключа
@@ -83,14 +83,14 @@ void MainWindow::on_Encrypt_clicked()
         }
     }
     //Вывод обработаной строки в поле Result
-    ui->Result->setText(encrpt_str.toLower());
+    ui->Result->setText(encrpt_str);
 }
 
 //Дешифровка (тот же алгоритм, только вместо сдвига вправо, сдвиг влево)
 void MainWindow::on_Decrypt_clicked()
 {
-    QString code=ui->Code->toPlainText().toUpper(),
-            key=ui->Key->toPlainText().toUpper(),
+    QString code=ui->Code->toPlainText().toLower(),
+            key=ui->Key->toPlainText().toLower(),
             decrpt_str;
 
     if (code.size() != key.size()){
@@ -109,7 +109,7 @@ void MainWindow::on_Decrypt_clicked()
             return;
         }
     }
-    ui->Result->setText(decrpt_str.toLower());
+    ui->Result->setText(decrpt_str);
 }
 
 //Вывод размера строки кода
