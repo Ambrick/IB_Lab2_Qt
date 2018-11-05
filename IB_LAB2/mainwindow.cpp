@@ -75,7 +75,7 @@ void MainWindow::on_Encrypt_clicked()
                 //то, переводим в другой конец индекс
                 new_index=new_index-alphabet.size()+1;
             //Накидываем в строку символ алфавита по полученному индексу
-            encrpt_str.push_back(alphabet[new_index]);
+            encrpt_str+=alphabet[new_index];
         } else{
             //Сообщение об ошибке, в случае недопустимых символов
             QMessageBox::critical(this, "Ошибка", "Допустимы только латинские символы!");
@@ -103,7 +103,7 @@ void MainWindow::on_Decrypt_clicked()
             int new_index = alphabet.indexOf(code[i])-alphabet.indexOf(key[i]);
             if (new_index < 0)
                 new_index=new_index+alphabet.size()-1;
-            decrpt_str.push_back(alphabet[new_index]);
+            decrpt_str+=alphabet[new_index];
         } else{
             QMessageBox::critical(this, "Ошибка", "Допустимы только латинские символы!");
             return;
